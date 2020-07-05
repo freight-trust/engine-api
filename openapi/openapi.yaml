@@ -1,0 +1,116 @@
+openapi: 3.0.1
+info:
+  title: FreightTrustEngine OpenAPI
+  version: 1.0.0
+servers:
+  - url: 'https://3.235.53.8/api.rsc/$oas'
+paths:
+  /certificates:
+    $ref: paths/certificates.yaml
+  /certificates/$count:
+    $ref: paths/certificates@$count.yaml
+  '/certificates(''{Name}'')':
+    $ref: 'paths/certificates(''{Name}'').yaml'
+  '/certificates(''{Name}'')/{propertyName}/$value':
+    $ref: 'paths/certificates(''{Name}'')@{propertyName}@$value.yaml'
+  /connectors:
+    $ref: paths/connectors.yaml
+  /connectors/$count:
+    $ref: paths/connectors@$count.yaml
+  '/connectors(''{ConnectorId}'')':
+    $ref: 'paths/connectors(''{ConnectorId}'').yaml'
+  '/connectors(''{ConnectorId}'')/{propertyName}/$value':
+    $ref: 'paths/connectors(''{ConnectorId}'')@{propertyName}@$value.yaml'
+  /files:
+    $ref: paths/files.yaml
+  /files/$count:
+    $ref: paths/files@$count.yaml
+  '/files(ConnectorId=''{ConnectorId}'',Folder=''{Folder}'',Filename=''{Filename}'',MessageId=''{MessageId}'')':
+    $ref: >-
+      paths/files(ConnectorId='{ConnectorId}',Folder='{Folder}',Filename='{Filename}',MessageId='{MessageId}').yaml
+  '/files(ConnectorId=''{ConnectorId}'',Folder=''{Folder}'',Filename=''{Filename}'',MessageId=''{MessageId}'')/{propertyName}/$value':
+    $ref: >-
+      paths/files(ConnectorId='{ConnectorId}',Folder='{Folder}',Filename='{Filename}',MessageId='{MessageId}')@{propertyName}@$value.yaml
+  /logs:
+    $ref: paths/logs.yaml
+  /logs/$count:
+    $ref: paths/logs@$count.yaml
+  '/logs(''{Id}'')':
+    $ref: 'paths/logs(''{Id}'').yaml'
+  '/logs(''{Id}'')/{propertyName}/$value':
+    $ref: 'paths/logs(''{Id}'')@{propertyName}@$value.yaml'
+  /ports:
+    $ref: paths/ports.yaml
+  /ports/$count:
+    $ref: paths/ports@$count.yaml
+  '/ports(''{PortId}'')':
+    $ref: 'paths/ports(''{PortId}'').yaml'
+  '/ports(''{PortId}'')/{propertyName}/$value':
+    $ref: 'paths/ports(''{PortId}'')@{propertyName}@$value.yaml'
+  /profile:
+    $ref: paths/profile.yaml
+  /profile/$count:
+    $ref: paths/profile@$count.yaml
+  /requests:
+    $ref: paths/requests.yaml
+  /requests/$count:
+    $ref: paths/requests@$count.yaml
+  '/requests(''{Id}'')':
+    $ref: 'paths/requests(''{Id}'').yaml'
+  '/requests(''{Id}'')/{propertyName}/$value':
+    $ref: 'paths/requests(''{Id}'')@{propertyName}@$value.yaml'
+  /transactions:
+    $ref: paths/transactions.yaml
+  /transactions/$count:
+    $ref: paths/transactions@$count.yaml
+  '/transactions(''{Id}'')':
+    $ref: 'paths/transactions(''{Id}'').yaml'
+  '/transactions(''{Id}'')/{propertyName}/$value':
+    $ref: 'paths/transactions(''{Id}'')@{propertyName}@$value.yaml'
+  /workspaces:
+    $ref: paths/workspaces.yaml
+  /workspaces/$count:
+    $ref: paths/workspaces@$count.yaml
+  '/workspaces(''{Workspaceid}'')':
+    $ref: 'paths/workspaces(''{Workspaceid}'').yaml'
+  '/workspaces(''{Workspaceid}'')/{propertyName}/$value':
+    $ref: 'paths/workspaces(''{Workspaceid}'')@{propertyName}@$value.yaml'
+  /archiveLogs:
+    $ref: paths/archiveLogs.yaml
+  /copyConnector:
+    $ref: paths/copyConnector.yaml
+  /copyPort:
+    $ref: paths/copyPort.yaml
+  /createCert:
+    $ref: paths/createCert.yaml
+  /deleteLogs:
+    $ref: paths/deleteLogs.yaml
+  /deleteTransactions:
+    $ref: paths/deleteTransactions.yaml
+  /downloadFile:
+    $ref: paths/downloadFile.yaml
+  /exchangeCert:
+    $ref: paths/exchangeCert.yaml
+  /getTransactionLogs:
+    $ref: paths/getTransactionLogs.yaml
+  /importProfiles:
+    $ref: paths/importProfiles.yaml
+  /refreshTransactions:
+    $ref: paths/refreshTransactions.yaml
+  /restartFile:
+    $ref: paths/restartFile.yaml
+  /sendFile:
+    $ref: paths/sendFile.yaml
+components:
+  securitySchemes:
+    authtoken_header:
+      type: apiKey
+      in: header
+      name: x-cdata-authtoken
+    authtoken_query:
+      type: apiKey
+      in: query
+      name: '@authtoken'
+    basic:
+      scheme: basic
+      type: http

@@ -1,0 +1,21 @@
+{
+  "name": "@freight-trust/gh-redoc",
+  "version": "1.0.0",
+  "description": "redoc build site build tools",
+  "scripts": {
+    "generate-versions": "node generate-versions.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freight-trust/engine-api.git"
+  },
+  "author": "Freight Trust & Clearing",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/freight-trust/engine-api/issues"
+  },
+  "homepage": "https://freight-trust.github.io/engine-api",
+  "dependencies": {
+    "minimist": "~1.2.5"
+  }
+}

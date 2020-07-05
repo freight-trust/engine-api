@@ -1,0 +1,67 @@
+type: object
+properties:
+  HeartbeatInterval:
+    description: >-
+      The interval in which the application will perform scheduled tasks such as
+      sending files to your trading partners.
+    type: integer
+    format: int32
+  NotifyEmail:
+    description: >-
+      Send an email to the specified email addresses when an error is
+      encountered.
+    type: string
+  NotifyEmailFrom:
+    description: The sender of notification emails.
+    type: string
+  NotifyEmailTo:
+    description: The receiver of notification emails.
+    type: string
+  NotifyEmailSubject:
+    description: The subject of notification emails.
+    type: string
+  SMTPServer:
+    description: The host name or IP address of your SMTP server.
+    type: string
+  SMTPUser:
+    description: The username to authenticate to your SMTP server.
+    type: string
+  SMTPPassword:
+    description: The password to authenticate to your SMTP server.
+    type: string
+  SMTPPort:
+    description: The port of your SMTP server.
+    type: string
+  SMTPSSLMode:
+    description: The SSL mode of your SMTP server.
+    type: string
+  SendStatusReport:
+    description: Send a status report to the email address .
+    type: boolean
+  SendReportInterval:
+    description: The interval of send a status report to the email address.
+    type: string
+  NotifyWindowsEvent:
+    description: Write error messages to the Windows Application Event Log.
+    type: boolean
+  NotifyStopStart:
+    description: Log when the application starts and stops in the event log.
+    type: boolean
+  ProxyType:
+    description: The type of proxy to connect through.
+    type: string
+  ProxyHost:
+    description: The host name or IP address of the proxy.
+    type: string
+  ProxyPort:
+    description: The port of your proxy.
+    type: string
+  ProxyUser:
+    description: The username to use when authenticating to your proxy.
+    type: string
+  ProxyPassword:
+    description: The password to use when authenticating to your proxy.
+    type: string
+  ProxyAuthscheme:
+    description: The auth scheme to use when authenticating to your proxy.
+    type: string
